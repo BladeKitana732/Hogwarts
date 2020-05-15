@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import Login from './components/Login';
-import Home from './components/Home';
-import Profile from './components/Profile';
-import Hero from './components/Hero';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
-import Navbar from './components/Navbar';
-import React from './heroComp/hero';
+// import Login from './components/Login';
+// import Home from './components/Home';
+// import Profile from './components/Profile';
+// import Hero from './components/Hero';
+// import { BrowserRouter as Router, Route} from 'react-router-dom';
+// import Navbar from './components/Navbar';
+import heroInfo from './components/heroInfo';
 
 function App() {
   return (
     <div>
-
+      <heroInfo/>
     </div>
     // <Router>
     //   <Navbar />
