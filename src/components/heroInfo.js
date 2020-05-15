@@ -1,19 +1,19 @@
 import React from 'react';
 
 
-function heroInfo() {
+function HeroInfo() {
     return(
         <React.Fragment>
         <div class ="parent">
             <ul class="children">
                 <li>
-                    <input class="username" placeholder="Username">s</input>
+                    <input class="username" placeholder="Username"></input>
                 </li>
                 <li>
-                    <input class ="password" placeholder="Password">s</input>
+                    <input class ="password" placeholder="Password"></input>
                 </li>
                 <li>
-                    <input class="password1" placeholder="Confirm Password">s</input>
+                    <input class="password1" placeholder="Confirm Password"></input>
                 </li>
             </ul>
         </div>
@@ -21,4 +21,4 @@ function heroInfo() {
     )
 }
 
-export default heroInfo;
+export default HeroInfo;
