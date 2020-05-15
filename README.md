@@ -1,3 +1,49 @@
+## MIN REQUIREMENTS 
+
+ Project has Instructor approval at the start of project week
+
+ Project code is pushed to a public Git repository - Completed 
+
+ Project planning board used throughout project
+
+ ReactJS is used for frontend development
+
+ Uses CSS or styled components to style application
+
+ App renders in browser
+
+ Uses a 3rd party api - https://superheroapi.com/index.html 
+
+ Project is deployed using 1 of the deployment options(heroku, surge, aws or firebase
+
+Must contain a readme file at the root of the repository - Completed
+
+ Git repo has at least 30 git commit
+
+ Has readme.md file at the root of repository - Completed 
+
+ App should be able to use CRUD in some form 
+
+ readme file clearly documents the purpose of the project as a problem statement
+ >Purpose of project is to have user make account, in doing so they get access to hero and villian information through 3rd party api to learn more about them.
+
+ readme file clearly documents the target end user for this program.
+ >Due to pandemic, we are making this application for anyone home (which is everyone lol), to have fun and let loose and remember the good times when comics and books were still a thing. 
+
+ readme file has embedded link (not url) to publicly deployed app
+
+ readme file includes image to wireframes
+
+### Login page 
+ ![wireframe](./Login_SignUp.png)
+ ### Home page
+  ![wireframe](./HomeWF.jpg)
+  ### Hero page 
+   ![wireframe](./HeroWF.jpg)
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
