@@ -39,7 +39,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 
 ## Wireframe
-![](./wireframe/Wireframe.pdf)
+![](./wireframe/Wireframe.png)
 
 ## Learn More
 
