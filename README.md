@@ -34,7 +34,12 @@ Must contain a readme file at the root of the repository - Completed
 
  readme file includes image to wireframes
 
+### Login page 
  ![wireframe](./Login_SignUp.png)
+ ### Home page
+  ![wireframe](./HomeWF.jpg)
+  ### Hero page 
+   ![wireframe](./HeroWF.jpg)
 
 
 
