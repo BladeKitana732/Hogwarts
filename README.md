@@ -34,6 +34,8 @@ Must contain a readme file at the root of the repository - Completed
 
  readme file includes image to wireframes
 
+ ![wireframe](./Login_SignUp.png)
+
 
 
 
