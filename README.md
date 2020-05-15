@@ -12,7 +12,7 @@
 
  App renders in browser
 
- Uses a 3rd party api
+ Uses a 3rd party api - https://superheroapi.com/index.html 
 
  Project is deployed using 1 of the deployment options(heroku, surge, aws or firebase
 
@@ -33,7 +33,7 @@ Must contain a readme file at the root of the repository - Completed
  readme file has embedded link (not url) to publicly deployed app
 
  readme file includes image to wireframes
- 
+
 
 
 
