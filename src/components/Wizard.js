@@ -24,7 +24,7 @@ export default class Wizard extends Component {
             let info = result.data;
 
             console.log(info)
-            
+
         })
     }
 
