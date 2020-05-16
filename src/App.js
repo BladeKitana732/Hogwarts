@@ -3,7 +3,7 @@ import './App.css';
 import Login from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
-import Hero from './components/Hero';
+import Wizard from './components/Wizard';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
 
@@ -14,7 +14,7 @@ function App() {
       <Route exact path ="/" component= {Login} />
       <Route exact path ="/Home" component= {Home} />
       <Route exact path ="/Profile" component= {Profile} />
-      <Route exact path ="/Hero" component= {Hero} />
+      <Route exact path ="/Wizard" component= {Wizard} />
     </Router>
   );
 }
