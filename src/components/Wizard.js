@@ -4,7 +4,7 @@ import axios from 'axios';
 //referencing wine api work
 
 let hogwarts = axios.create({
-    baseURL: "https://www.potterapi.com/v1/sortingHat"
+    baseURL: "https://www.potterapi.com/v1/characters?key=REACT_APP_API_KEY"
 })
 
 
