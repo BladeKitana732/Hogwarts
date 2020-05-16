@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react'
 
-export default class Home extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+export default function Home() {
+    return (
+        <div>
+            <h1>Home Comp</h1>
+        </div>
+    )
 }
 
 
