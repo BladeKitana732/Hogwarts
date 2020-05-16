@@ -1,6 +1,6 @@
 ## MIN REQUIREMENTS 
 
- Project has Instructor approval at the start of project week
+ Project has Instructor approval at the start of project week - Completed
 
  Project code is pushed to a public Git repository - Completed 
 
@@ -12,7 +12,7 @@
 
  App renders in browser
 
- Uses a 3rd party api - https://superheroapi.com/index.html 
+ Uses a 3rd party api - https://www.potterapi.com/v1/characters 
 
  Project is deployed using 1 of the deployment options(heroku, surge, aws or firebase
 
@@ -25,10 +25,10 @@ Must contain a readme file at the root of the repository - Completed
  App should be able to use CRUD in some form 
 
  readme file clearly documents the purpose of the project as a problem statement
- >Purpose of project is to have user make account, in doing so they get access to hero and villian information through 3rd party api to learn more about them.
+ >Purpose of project is to have user make account, in doing so they get access to Harry Potter information through 3rd party api to learn more about characters, spells, houses, etc.
 
  readme file clearly documents the target end user for this program.
- >Due to pandemic, we are making this application for anyone home (which is everyone lol), to have fun and let loose and remember the good times when comics and books were still a thing. 
+ >Due to pandemic, we are making this application for anyone home (which is everyone lol), to have fun and let loose and remember the good times before Harry Potter finished. 
 
  readme file has embedded link (not url) to publicly deployed app
 
