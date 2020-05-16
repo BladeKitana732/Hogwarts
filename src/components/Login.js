@@ -1,6 +1,7 @@
 import React ,{Component } from 'react';
 import firebase from '../config/fireauth'
-import { Button } from 'react-bootstrap';
+import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 /*
     create class component Login
         initialize user state
@@ -26,22 +27,10 @@ class  Login extends Component {
             password:''
         }
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleSignup = this.handleSignup.bind(this)
         this.handleChange = this.handleChange.bind(this)
 
     }
-    handleSignup(e){
-         e.preventDefault();
-         firebase.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then(
-             (u)=>{
-                    console.log(u)
-                    console.log("u.uid",u.user.uid)
-              }
-         ).catch(e=>{
-             console.log(e)
-         })
-    }
-    handleChange(e){
+     handleChange(e){
         this.setState({[e.target.name]:e.target.value})
     }
     handleSubmit(e){
@@ -63,29 +52,92 @@ class  Login extends Component {
     }
     render(){
       return (
-        <div className="container">
-            <form>
-                <div className="col-8">
-                    <label className="label" >Email:</label>
-                    <input  className="input" value={this.state.email} onChange={this.handleChange} type="email" name="email"
-                    id="EmailId" />
-                </div>
-                <div className="col-8">
-                    <label >Password:</label>
-                    <input className="input"  value={this.state.password} onChange={this.handleChange} type="password" name="password"
-                    id="PasswordId" />
-                </div>
-                <div className="col-8">
-                    <Button variant="primary" type="submit" onClick={this.handleSubmit}> Login</Button>
-                    <Button variant="success" onClick={this.handleSignup}> Register</Button>
-                </div>
 
-            </form>
-            <label></label>
-        </div>
+        <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+        <Grid.Column style={{ maxWidth: 450 }}>
+          <Header as='h2' color='teal' textAlign='center'>
+             Log-in to your account
+          </Header>
+          <Form size='large'>
+            <Segment stacked>
+              <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address'value={this.state.email} onChange={this.handleChange} type="email" name="email"
+                    id="EmailId" />
+              <Form.Input
+                fluid
+                icon='lock'
+                iconPosition='left'
+                placeholder='Password'
+                type='password'
+                value={this.state.password} onChange={this.handleChange} name="password"/>
+    
+              <Button color='teal' fluid size='large' type="submit" onClick={this.handleSubmit}>
+                Login
+              </Button>
+            </Segment>
+          </Form>        
+        </Grid.Column>
+      </Grid>
       );
     }
    
   }
-  
+  class  Signup extends Component {
+    constructor(props){
+        super(props)
+        this.state={
+            email:'',
+            password:''
+        }
+        this.handleSignup = this.handleSignup.bind(this)
+        this.handleChange = this.handleChange.bind(this)
+
+    }
+    handleSignup(e){
+         e.preventDefault();
+         firebase.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then(
+             (u)=>{
+                    console.log(u)
+                    console.log("u.uid",u.user.uid)
+              }
+         ).catch(e=>{
+             console.log(e)
+         })
+    }
+    handleChange(e){
+        this.setState({[e.target.name]:e.target.value})
+    }
+   
+    render(){
+      return (
+
+        <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+        <Grid.Column style={{ maxWidth: 450 }}>
+          <Header as='h2' color='teal' textAlign='center'>
+             Signup for new account
+          </Header>
+          <Form size='large'>
+            <Segment stacked>
+              <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address'value={this.state.email} onChange={this.handleChange} type="email" name="email"
+                    id="EmailId" />
+              <Form.Input
+                fluid
+                icon='lock'
+                iconPosition='left'
+                placeholder='Password'
+                type='password'
+                value={this.state.password} onChange={this.handleChange} name="password"/>
+    
+              <Button color='teal' fluid size='large' type="submit" onClick={this.handleSignup}>
+                Signup
+              </Button>
+            </Segment>
+          </Form>
+        </Grid.Column>
+      </Grid>
+
+      );
+    }
+   
+  }
+  export {Signup};
   export default Login;
