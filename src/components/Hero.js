@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 
-export default function Hero() {
-    return (
-        <div>
-            <h1>Sanity check Hero component</h1>
-        </div>
-    )
+export default class Hero extends Component {
+    render() {
+        return (
+            <div>
+                
+            </div>
+        )
+    }
 }
+
