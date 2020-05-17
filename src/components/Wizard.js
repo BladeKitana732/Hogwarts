@@ -6,13 +6,17 @@ console.log("wizard comp");
 
 const key = process.env.REACT_APP_KEY;
 
-console.log(`https://www.potterapi.com/v1/characters?key=${key}`);
+// console.log(`https://www.potterapi.com/v1/characters?key=${key}`);
 
 //referencing back to wine api
 
 const workingLink = `https://www.potterapi.com/v1/characters?key=${key}`
 
 export default class Wizard extends Component {
+
+    state = {
+        info: []
+    }
     
  componentDidMount() {
 
@@ -24,7 +28,7 @@ export default class Wizard extends Component {
             console.log(allData);
     
             this.setState({
-                info: allData.data
+                info: allData
             });
             
         })
@@ -42,6 +46,12 @@ export default class Wizard extends Component {
         return (
             <div>
                 <h1>Wizard info Component</h1>
+
+                {this.state.info.map(details =>
+                <div key= { details.id }><h2>{details.name}</h2>
+                </div> 
+                
+                )}
             </div>
         )
     }
