@@ -75,7 +75,7 @@ class Profile extends Component{
             return (
                 <React.Fragment>
                     <Container>
-                        <Menu vertical position="right">
+                        <Menu  sidebar="true" vertical   position="right">
                               <Menu.Menu >
                                     <Icon className="user" size='large'>
                                         {this.state.user.displayName?this.state.user.displayName:''}   
@@ -100,15 +100,16 @@ class Profile extends Component{
                             <Form size='large'>
                             <Header hidden>UID :{(this.state.user.uid)?this.state.user.uid:'0'}</Header>
                                 <Segment stacked>
-                                <Form.Input icon='user' disable="true" iconPosition='left' placeholder='E-mail address' type="email" value={this.state.user.email} name="email"  
+                                <Form.Input icon='mail' disable="true" iconPosition='left' placeholder='E-mail address' type="email" value={this.state.user.email} name="email"  
                                 />
-                                 <Form.Input  icon='user' iconPosition='left' placeholder='Names' type="text" value={this.state.user.displayName?this.state.user.displayName:''}   name="displayName"
+                                 <Form.Input  icon='user' iconPosition='left' placeholder='Name' type="text" value={this.state.user.displayName?this.state.user.displayName:''}   name="displayName"
                                     id="Name" onChange = {this.handleNameChange} />
                                     <button className = " ui button" style={{color:'teal'  ,size:'large'}} onClick={this.updateProfile}>
                                     Update Name
                                 </button>
                                 </Segment>
-                            </Form>        
+                            </Form>  
+                                  
                             </Grid.Column>
                         </Grid>                        
                     </Container>  

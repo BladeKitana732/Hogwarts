@@ -2,6 +2,8 @@ import React ,{Component } from 'react';
 import firebase from '../config/fireauth'
 import { Form, Grid, Header, Segment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
+import {Link} from 'react-router-dom';
+
 /*
     create class component Login
         initialize user state
@@ -60,7 +62,7 @@ class  Login extends Component {
           </Header>
           <Form size='large'>
             <Segment stacked>
-              <Form.Input  icon='user' iconPosition='left' placeholder = "E-mail Address" autoComplete="username" value={this.state.email} onChange={this.handleChange} type="email" name="email" />
+              <Form.Input  icon='mail' iconPosition='left' placeholder = "E-mail Address" autoComplete="username" value={this.state.email} onChange={this.handleChange} type="email" name="email" />
               <Form.Input
                 icon='lock'
                 iconPosition='left'
@@ -108,7 +110,7 @@ class  Login extends Component {
    
     render(){
       return (
-
+        <>
         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
         <Grid.Column style={{ maxWidth: 450 }}>
           <Header as='h2' color='teal' textAlign='center'>
@@ -116,7 +118,7 @@ class  Login extends Component {
           </Header>
           <Form size='large'>
             <Segment stacked>
-              <Form.Input  icon='user' iconPosition='left' autoComplete="current-password" placeholder='E-mail address'value={this.state.email} onChange={this.handleChange} type="email" name="email"
+              <Form.Input  icon='mail' iconPosition='left' autoComplete="username" placeholder='E-mail address'value={this.state.email} onChange={this.handleChange} type="email" name="email"
                />
               <Form.Input
                 icon='lock'
@@ -129,11 +131,14 @@ class  Login extends Component {
               <button className="ui button" style={{color:'teal' , size:'large' }} onClick={this.handleSignup}>
                   Signup
               </button>
-            </Segment>
+             </Segment>
           </Form>
+          <Link to="/Login" >Already Signed-Up? Login</Link>
+
         </Grid.Column>
       </Grid>
 
+        </>
       );
     }
    
