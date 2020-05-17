@@ -1,40 +1,40 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-
-//referencing wine api work
-
-
-let hogwarts = axios.create({
-    baseURL: "https://www.potterapi.com/v1/characters?key=REACT_APP_KEY"
-})
-
-
+console.log("wizard comp");
+console.log(process.env.REACT_APP_KEY);
+//referencing wine api work from github to now render data 
 
 export default class Wizard extends Component {
+    constructor(props) {
+		super(props);
+		this.state = {
+			info: []
+		};
+	}
+ 
+    async allInfo() {
+		try {
+			const allData = await axios.get(
+				`https://www.potterapi.com/v1/characters?key=REACT_APP_KEY`
+			);
+            
+            console.log(allData);
+            console.log(allData.data);
+            
 
-    state = {
-        wizard: [],
-       
-    }
+			this.setState({
+				info: allData.data,
+            });
+            
+		} catch (error) {
+			console.log(error);
+		}
+	}
 
-    constructor(){
-        super();
-
-        hogwarts.get('/') 
-
-        .then((result) => {
-            let info = result.data;
-
-            console.log(info)
-
-            this.setState({
-                wizard: result.data
-            })
-
-        })
-    }
-
+    componentDidMount() {
+		this.allInfo();
+	}
 
     
     render() {
