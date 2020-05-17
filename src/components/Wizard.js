@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+
 //referencing wine api work
 
 let hogwarts = axios.create({
-    baseURL: "https://www.potterapi.com/v1/characters?key=REACT_APP_KEY_VARIABLE"
+    baseURL: "https://www.potterapi.com/v1/characters?key=REACT_APP_API_KEY"
 })
 
 
@@ -12,7 +13,8 @@ let hogwarts = axios.create({
 export default class Wizard extends Component {
 
     state = {
-        house: []
+        wizard: [],
+        house: [],
     }
 
     constructor(){
