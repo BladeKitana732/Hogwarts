@@ -27,6 +27,10 @@ export default class Wizard extends Component {
 
             console.log(info)
 
+            this.setState({
+                wizard: result.data.id
+            })
+
         })
     }
 
