@@ -16,7 +16,7 @@ export default class Wizard extends Component {
     async allInfo() {
 		try {
 			const allData = await axios.get(
-				`https://www.potterapi.com/v1/characters?key=REACT_APP_KEY`
+				`https://www.potterapi.com/v1/characters?key=process.env.REACT_APP_KEY`
 			);
             
             console.log(allData);
