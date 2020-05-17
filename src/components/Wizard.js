@@ -3,7 +3,7 @@ import axios from 'axios';
 
 console.log("wizard comp");
 console.log(process.env.REACT_APP_KEY);
-//referencing wine api work from github to now render data 
+//referencing async/try/catch
 
 export default class Wizard extends Component {
     constructor(props) {
