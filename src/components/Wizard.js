@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 let hogwarts = axios.create({
-    baseURL: "https://www.potterapi.com/v1/characters?key=REACT_APP_HEROSITE_API_KEY"
+    baseURL: "https://www.potterapi.com/v1/characters?key=REACT_APP_KEY"
 })
 
 
@@ -29,7 +29,7 @@ export default class Wizard extends Component {
             console.log(info)
 
             this.setState({
-                wizard: result.data.id
+                wizard: result.data
             })
 
         })
