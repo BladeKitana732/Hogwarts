@@ -4,8 +4,9 @@ import axios from 'axios';
 
 //referencing wine api work
 
+
 let hogwarts = axios.create({
-    baseURL: "https://www.potterapi.com/v1/characters?key=REACT_APP_API_KEY"
+    baseURL: "https://www.potterapi.com/v1/characters?key=REACT_APP_HEROSITE_API_KEY"
 })
 
 
@@ -14,7 +15,7 @@ export default class Wizard extends Component {
 
     state = {
         wizard: [],
-        house: [],
+       
     }
 
     constructor(){
@@ -34,6 +35,8 @@ export default class Wizard extends Component {
         })
     }
 
+
+    
     render() {
         return (
             <div>

@@ -6,10 +6,12 @@ import Profile from './components/Profile';
 import Wizard from './components/Wizard';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
-require('dotenv').config();
+
+console.log(process.env.REACT_APP_HEROSITE_API_KEY);
 
 
-console.log(process.env.REACT_APP_API_KEY);
+
+
 
 function App() {
   return (
