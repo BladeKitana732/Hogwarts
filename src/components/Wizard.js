@@ -6,41 +6,37 @@ console.log("wizard comp");
 
 const key = process.env.REACT_APP_KEY;
 
-//referencing async/try/catch
-
 console.log(`https://www.potterapi.com/v1/characters?key=${key}`);
 
+//referencing back to wine api
+
+const workingLink = `https://www.potterapi.com/v1/characters?key=${key}`
+
 export default class Wizard extends Component {
-    // constructor(props) {
-	// 	super(props);
-	// 	this.state = {
-	// 		info: []
-	// 	};
-	// }
- 
-    // async allInfo() {
-	// 	try {
-	// 		const allData = await axios.get(
-	// 			`https://www.potterapi.com/v1/characters?key=process.env.REACT_APP_KEY`
-	// 		);
-            
-    //         console.log(allData);
-    //         console.log(allData.data);
-            
+    
+ componentDidMount() {
 
-	// 		this.setState({
-	// 			info: allData.data,
-    //         });
+        axios.get(workingLink)
+    
+        .then((result) => {
+            const allData = result.data;
+
+            console.log(allData);
+    
+            this.setState({
+                info: allData.data
+            });
             
-	// 	} catch (error) {
-	// 		console.log(error);
-	// 	}
-	// }
+        })
 
-    // componentDidMount() {
-	// 	this.allInfo();
-	// }
+        .catch((err) => {
 
+            console.log('Error has been computed', err)
+    
+        });
+
+
+    }
     
     render() {
         return (
