@@ -1,6 +1,6 @@
 import React ,{Component } from 'react';
 import firebase from '../config/fireauth'
-import { Button, Form, Grid, Header, Segment } from 'semantic-ui-react'
+import { Form, Grid, Header, Segment } from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 /*
     create class component Login
@@ -60,19 +60,18 @@ class  Login extends Component {
           </Header>
           <Form size='large'>
             <Segment stacked>
-              <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address'value={this.state.email} onChange={this.handleChange} type="email" name="email"
-                    id="EmailId" />
+              <Form.Input  icon='user' iconPosition='left' placeholder = "E-mail Address" autoComplete="username" value={this.state.email} onChange={this.handleChange} type="email" name="email" />
               <Form.Input
-                fluid
                 icon='lock'
                 iconPosition='left'
-                placeholder='Password'
+                autoComplete="current-password"
+                placeholder="password"
                 type='password'
                 value={this.state.password} onChange={this.handleChange} name="password"/>
-    
-              <Button color='teal' fluid size='large' type="submit" onClick={this.handleSubmit}>
-                Login
-              </Button>
+                 <button className="ui button" color='teal' size='large' onClick={this.handleSubmit}>
+                    Login
+                  </button>
+             
             </Segment>
           </Form>        
         </Grid.Column>
@@ -117,19 +116,19 @@ class  Login extends Component {
           </Header>
           <Form size='large'>
             <Segment stacked>
-              <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address'value={this.state.email} onChange={this.handleChange} type="email" name="email"
-                    id="EmailId" />
+              <Form.Input  icon='user' iconPosition='left' autoComplete="current-password" placeholder='E-mail address'value={this.state.email} onChange={this.handleChange} type="email" name="email"
+               />
               <Form.Input
-                fluid
                 icon='lock'
                 iconPosition='left'
                 placeholder='Password'
+                autoComplete="current-password"
                 type='password'
                 value={this.state.password} onChange={this.handleChange} name="password"/>
     
-              <Button color='teal' fluid size='large' type="submit" onClick={this.handleSignup}>
-                Signup
-              </Button>
+              <button className="ui button" style={{color:'teal' , size:'large' }} onClick={this.handleSignup}>
+                  Signup
+              </button>
             </Segment>
           </Form>
         </Grid.Column>
