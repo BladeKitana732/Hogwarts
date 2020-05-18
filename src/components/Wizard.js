@@ -53,17 +53,11 @@ export default class Wizard extends Component {
 //     }
 
     //was able to reference my Pawtastic project regarding forms to get this functionality: https://github.com/BladeKitana732/Pawtastic_form
-    userInput(e){
-
-        e.preventDefault();
-
+    userInput = (event) => {
         this.setState({
-            input: e.target.value
+            input: event.target.value,
         })
-
-        console.log(this.state.input);
-
-    }
+      }
 
     //purpose of function is to handle the submit from user text to render proper info 
     handlingSubmit(e) {
@@ -88,7 +82,7 @@ export default class Wizard extends Component {
                     <label>
                         Please enter name of witch or wizard. You may also type in the house to see all who belong to it.
 
-                        <input type = "text" value={this.state.infoBack} onChange = {this.userInput} />
+                        <input type = "text" value={this.state.input} onChange = {this.userInput} />
 
                     </label>
                     
