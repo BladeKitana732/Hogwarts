@@ -79,7 +79,7 @@ export default class Wizard extends Component {
             
             
 
-            // console.log(infoRendered);
+            console.log(infoRendered);
         })
 
         // console.log(workingLink);
@@ -113,11 +113,12 @@ export default class Wizard extends Component {
 
                 {this.state.infoBack.map((iterate) => {
                     return (
-                        <div key = {iterate.id}>
+                        <div key = {iterate._id}>
+                            <h1>{iterate._id}</h1>
                             <h2> {iterate.name} </h2>
                             <h3>{iterate.house}</h3> 
                             <p> {iterate.bloodStatus}</p>
-                            <p>{iterate.deathEater}</p>
+                            <p>{ iterate.deathEater ? "true" : "false" }</p>
                             
                         </div>
 
