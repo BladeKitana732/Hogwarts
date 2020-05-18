@@ -11,9 +11,6 @@ class Profile extends Component{
                 displayName:'',
                 email:'',
             },
-            buttonStyle:{
-
-            },
             isLoaded:false 
         }
         this.updateProfile = this.updateProfile.bind(this)
@@ -74,7 +71,7 @@ class Profile extends Component{
          if(this.state.isLoaded===true && this.state.user!==null && this.state.user!== undefined){
             return (
                 <React.Fragment>
-                    <Container>
+                    <Container style={{ height: '100vh' }}>
                         <Menu  sidebar="true" vertical   position="right">
                               <Menu.Menu >
                                     <Icon className="user" size='large'>
@@ -92,7 +89,7 @@ class Profile extends Component{
                                       </Menu>
                             </Menu.Menu> 
                         </Menu>
-                         <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+                         <Grid textAlign='center' style={{ height: '60%' ,background:'teal'}} verticalAlign='middle'>
                             <Grid.Column style={{ maxWidth: 450 }}>
                             <Header as='h2' color='teal' textAlign='center'>
                                 User Profile

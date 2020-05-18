@@ -7,6 +7,8 @@ import Hero from './components/Hero';
 import { BrowserRouter as Router, Route,Link} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import firebase  from './config/fireauth';
+import 'semantic-ui-css/semantic.min.css'
+import { Message} from 'semantic-ui-react'
 
 class  App extends Component{
   constructor(props){
@@ -46,7 +48,10 @@ class  App extends Component{
               <div className="App">
                 <Router>
                   <nav>
-                    <Link to="/Signup" >Not a User ? Signup</Link>
+                  <Message>
+                      Not a User ?  <Link to="/Signup" >Signup </Link>
+                  </Message>
+                   
                     <Link to="/" ></Link>
                   </nav>
                   <Route exact path="/Login" component={Login}>
