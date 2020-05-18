@@ -71,14 +71,19 @@ export default class Wizard extends Component {
         axios.get(workingLink + this.state.input)
 
         .then(Response => {
-            let infoRendered = Response.data
+            let infoRendered = Response.data;
+
+            this.setState({
+                infoBack: infoRendered
+            })
+            
             
 
-            console.log(infoRendered);
+            // console.log(infoRendered);
         })
 
-        console.log(workingLink);
-        console.log(this.state.input);
+        // console.log(workingLink);
+        // console.log(this.state.input);
         
     }
 
@@ -110,9 +115,9 @@ export default class Wizard extends Component {
                     return (
                         <div key = {iterate.id}>
                             <h2> {iterate.name} </h2>
-                            {/* <h3>{iterate.house}</h3> */}
-                            {/* <p> {iterate.bloodStatus}</p>
-                            <p>{iterate.deathEater}</p> */}
+                            <h3>{iterate.house}</h3> 
+                            <p> {iterate.bloodStatus}</p>
+                            <p>{iterate.deathEater}</p>
                             
                         </div>
 
