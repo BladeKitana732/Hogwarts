@@ -11,7 +11,7 @@ const key = process.env.REACT_APP_KEY;
 //referencing back to wine api
 
 const workingLink = `https://www.potterapi.com/v1/characters/?key=${key}&name=`;
-const houseLink = `https://www.potterapi.com/v1/characters/?key=${key}&house=`;
+
 
 export default class Wizard extends Component {
     constructor(props){
@@ -113,8 +113,7 @@ export default class Wizard extends Component {
                             <p>Dumbledores Army: { iterate.dumbledoresArmy ? "true" : "false" }</p>
                         
                             
-                    
-                     </div>
+                        </div>
 
                     )
                 })}
@@ -131,6 +130,7 @@ export default class Wizard extends Component {
                 </div> 
                 
                 )} */}
-                )}
-                    </div>
-    
+            </div>
+        )
+    }
+}
