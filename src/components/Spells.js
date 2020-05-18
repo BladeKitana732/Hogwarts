@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const key = process.env.REACT_APP_KEY;
 
-const spells = `https://www.potterapi.com/v1/spells/?key${key}`;
+const spells = `https://www.potterapi.com/v1/spells/?key${key}&spells=`;
 
 export default class Spell extends Component {
     constructor(props){
@@ -58,6 +58,7 @@ export default class Spell extends Component {
     render  ()  {
     console.log("is it working now")
     return(
+        <React.Fragment>
             <div>
             <form onSubmit = {this.handlingSubmit}>
                 <label>
@@ -81,6 +82,7 @@ export default class Spell extends Component {
                 })
             }
             </div>  
+            </React.Fragment>
                 ) 
     }
 }
