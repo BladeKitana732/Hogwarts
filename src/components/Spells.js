@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const key = process.env.REACT_APP_KEY;
 
-const spells = `https://www.potterapi.com/v1/spells?key${key}`;
+const spells = `https://www.potterapi.com/v1/spells/?key${key}`;
 
 export default class Spell extends Component {
     constructor(props){
