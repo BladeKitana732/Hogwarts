@@ -10,7 +10,8 @@ export default class Home extends Component {
         this.state = {
             house: ''
         }
-
+        //binding function/method
+        this.getHouse = this.getHouse.bind(this);
 
     }
 
@@ -28,6 +29,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
+                <button onClick = {this.getHouse}>Click me</button>
                 <h1><strong>Your House is:</strong>{this.state.house}</h1>
             </div>
         )
