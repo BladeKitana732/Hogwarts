@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Route,Link} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import firebase  from './config/fireauth';
 import 'semantic-ui-css/semantic.min.css'
-import { Message} from 'semantic-ui-react'
 
 class  App extends Component{
   constructor(props){
@@ -32,6 +31,8 @@ class  App extends Component{
     })
   }
   render(){
+          console.log("this.state.user");
+          console.log(this.state.user)
         return (
           this.state.user?(
             <div className="App">
@@ -48,18 +49,18 @@ class  App extends Component{
               <div className="App">
                 <Router>
                   <nav>
-                  <Message>
-                      Not a User ?  <Link to="/Signup" >Signup </Link>
-                  </Message>
-                   
-                    <Link to="/" ></Link>
+                  <Link to="/Login" ></Link>
+                  <Link to="/Signup" ></Link>                
+                  <Link to="/" ></Link>
                   </nav>
                   <Route exact path="/Login" component={Login}>
                   </Route>
-                  <Route exact path="/Signup" component={Signup}>
+                    <Route exact path="/Signup" component={Signup}>
                   </Route>
+                  <Route exact path="/" component={Login}>
+                  </Route>
+
                 </Router>
-                <Login/>
               </div>
 
           )

@@ -3,11 +3,11 @@ import firebase from '../config/fireauth'
 import { Form, Grid, Header, Segment ,Message} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
 import {Link} from 'react-router-dom';
-
+import image from '../images/loginImage.jpg'
 /*
     create class component Login
         initialize user state
-        bind handleSubmit,handleSubmit,and handleChange methods to class
+        bind handleSubmit,and handleChange methods to class
         procedure handleChange
             get user input 
             set user state
@@ -42,6 +42,8 @@ class  Login extends Component {
                 console.log("result",u)
                 if(!("code" in u)== null){
                     console.log("inside if")
+                    this.props.history.push('/Home')
+
                 }
             }
         ).catch(e=>{
@@ -54,36 +56,40 @@ class  Login extends Component {
     }
     render(){
       return (
-        <>
-            <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
-            <Grid  style={{background:'teal',width:'60%' ,height:'50%',maxWidth: 450}}>
+        <div className="App">
 
-            <Grid.Column style={{ maxWidth: 450 }}>
-              <Header as='h2' color='teal' textAlign='center'>
-                Log-in to your account
-              </Header>
-              <Form size='large' >
-                <Segment  stacked>
-                  <Form.Input  icon='mail' iconPosition='left' placeholder = "E-mail Address" autoComplete="username" value={this.state.email} onChange={this.handleChange} type="email" name="email" />
-                  <Form.Input
-                    icon='lock'
-                    iconPosition='left'
-                    autoComplete="current-password"
-                    placeholder="password"
-                    type='password'
-                    value={this.state.password} onChange={this.handleChange} name="password"/>
-                    <button className="ui button" style={{color:'teal' , size:'large' }} onClick={this.handleSubmit}>
-                        Login
-                      </button>
-                
-                </Segment>
-              </Form>        
+            <Grid textAlign='center' style={{ height: '100%' ,width:'100%',background:'linear-gradient(red, yellow, blue)'}} verticalAlign='middle'>
 
-               </Grid.Column>
+              <Grid  style={{background:'teal',width:'60%' ,height:'50%',maxWidth: 450}}>
+                <Grid.Column style={{ maxWidth: 450 }}>
+                <img src={image} className="ui fluid image" alt ="background"/>
+
+                  <Header as='h2' color='teal' textAlign='center'>
+                    Log-in to your account
+                  </Header>
+                  <Form size='large' >
+
+                    <Segment  stacked>
+                      <Form.Input  icon='mail' iconPosition='left' placeholder = "E-mail Address" autoComplete="username" value={this.state.email} onChange={this.handleChange} type="email" name="email" />
+                        <Form.Input
+                          icon='lock'
+                          iconPosition='left'
+                          autoComplete="current-password"
+                          placeholder="password"
+                          type='password'
+                          value={this.state.password} onChange={this.handleChange} name="password"/>
+                          <button className="ui button" style={{color:'teal' , size:'large' }} onClick={this.handleSubmit}>
+                              Login
+                          </button>               
+                          </Segment>
+                        </Form>        
+                        <Message>
+                          Not a User ?  <Link to="/Signup" >Signup </Link>
+                         </Message>
+                   </Grid.Column>
                </Grid>
-
           </Grid>
-        </>
+        </div>
      );
     }
    
@@ -105,6 +111,8 @@ class  Login extends Component {
              (u)=>{
                     console.log(u)
                     console.log("u.uid",u.user.uid)
+                    this.props.history.push('/Home')
+      
               }
          ).catch(e=>{
              console.log(e)
@@ -116,41 +124,38 @@ class  Login extends Component {
    
     render(){
       return (
-        <>
-        <Grid textAlign='center' style={{ height: '100vh'}} verticalAlign='middle'>
-        <Grid  style={{background:'teal',width:'60%' ,height:'50%',maxWidth: 450}}>
+        <div className="App">
+        <Grid textAlign='center' style={{ height: '100%' ,width:'100%',background:'linear-gradient(red, yellow, blue)'}}  verticalAlign='middle'>
+          <Grid  style={{background:'teal',width:'60%' ,height:'50%',maxWidth: 450}}>
+            <Grid.Column style={{ maxWidth: 450 }}>
+            <img src={image} className="ui fluid image" alt ="background"/>
 
-        <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as='h2' color='teal' textAlign='center'>
-             Signup for new account
-          </Header>
-          <Form size='large' >
-            <Segment stacked style={{background:'teal'}}>
-              <Form.Input  icon='mail' iconPosition='left' autoComplete="username" placeholder='E-mail address'value={this.state.email} onChange={this.handleChange} type="email" name="email"
-               />
-              <Form.Input
+              <Header as='h2' color='teal' textAlign='center'>
+                Signup for new account
+              </Header>
+              <Form size='large' >
+                <Segment stacked >
+                <Form.Input  icon='mail' iconPosition='left' autoComplete="username" placeholder='E-mail address'value={this.state.email} onChange={this.handleChange} type="email" name="email"
+                />
+                <Form.Input
                 icon='lock'
                 iconPosition='left'
                 placeholder='Password'
                 autoComplete="current-password"
                 type='password'
                 value={this.state.password} onChange={this.handleChange} name="password"/>
-    
-              <button className="ui button" style={{color:'teal' , size:'large' }} onClick={this.handleSignup}>
+                <button className="ui button" style={{color:'teal' , size:'large' }} onClick={this.handleSignup}>
                   Signup
-              </button>
-             </Segment>
-          </Form>
-          <Message>
-          Already Signed-Up?<Link to="/" color='teal'> Login</Link>
-          </Message>
-          
-
-        </Grid.Column>
+                </button>
+                </Segment>
+                </Form>
+                <Message>
+                  Already Signed-Up?<Link to="/" color='teal'> Login</Link>
+                </Message>
+              </Grid.Column>
+          </Grid>
         </Grid>
-      </Grid>
-
-        </>
+        </div>
       );
     }
    
