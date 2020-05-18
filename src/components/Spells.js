@@ -2,68 +2,85 @@ import React,{Component} from 'react';
 import axios from 'axios';
 
 
-const key = process.env.REACT_APP_API_KEY
+const key = process.env.REACT_APP_KEY;
 
-const spells = `https://www.potterapi.com/v1/spells?key=${key}`
+const spells = `https://www.potterapi.com/v1/spells?key${key}`;
 
-export default class Spells extends Component {
+export default class Spell extends Component {
     constructor(props){
         super(props)
 
         this.state = {
-            input: '',
-            infoback:[]
+            input:"",
+            infoBack:[],
         }
+        this.userInput=this.userInput.bind(this);
+        this.handlingSubmit=this.handlingSubmit.bind(this);
+    
     }
 
-    componentDidMount() {
-        axios.get(spells)
-
-        .then((result) => {
-            const allData = result.data;
-            
-            this.setState({
-                infoBack:allData
-            })
-        })
-        .catch((err) => {
-            console.log('error', err)
-        })
-    }
-
-    render() {
+    userInput = (event) => {
         
-        return(
+        this.setState({
+            input: event.target.value,
+        })
+
+         console.log(this.state.input);
+      }
+
+
+
+    handlingSubmit(e) {
+        console.log("whatsds")
+        e.preventDefault();
+        
+        axios.get(spells + this.state.input)
+        
+        .then(Response => {
+            let infoRendered = Response.data;
+            console.log(" how about now?" ,Response)
+            this.setState({
+                infoBack: infoRendered
+            })
             
-            <React.Fragment>
-                <div>
-                    <h1>crazy</h1>
-                    <form onSubmit = {this.handlingSubmit}>
-                        <label>
-                            <input type ="text" value={this.state.infoBack} onChange = {this.userInput}/>
-                        </label>
-                        <input type="submit" value="Submit"/>
-                    </form>
-                    {
-                        this.state.infoBack.map((iterate) => {
-                            return(
-                                <React.Fragment>
-                                    <div key = {iterate.id}>
-                                        <h1>{iterate.spell}</h1>
-                                        <h2>{iterate.type}</h2>
-                                        <h3>{iterate.effect}</h3>
-                                    </div>
-                                </React.Fragment>
-                            )
-                        })
-                    }
-                </div>
-                
-            </React.Fragment>
-        )
+            
+
+            console.log(infoRendered);
+        })
+
+         console.log(spells);
+         console.log(this.state.input);
+         console.log(" is it working or what?", this.state.infoBack);
+    }
+
+    
+    
+    render  ()  {
+    console.log("is it working now")
+    return(
+            <div>
+            <form onSubmit = {this.handlingSubmit}>
+                <label>
+                    <input type ="text" value={this.state.input} onChange = {this.userInput}/>
+                </label>
+                <input type="submit" value="Submit"/>
+            </form>
+          
+            { 
+                this.state.infoBack.map((iterate) => {
+                    return(
+                        
+                            <div key = {iterate._id}>
+                                <h1>{iterate.spell}</h1>
+                                <h2>{iterate.type}</h2>
+                                <h3>{iterate.effect}</h3>
+                            </div>
+                            
+                        
+                    )
+                })
+            }
+            </div>  
+                ) 
     }
 }
-
-
-
-
