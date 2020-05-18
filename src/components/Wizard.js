@@ -38,7 +38,7 @@ export default class Wizard extends Component {
             console.log(allData);
     
             this.setState({
-                info: allData
+                infoBack: allData
             });
             
         })
@@ -66,6 +66,17 @@ export default class Wizard extends Component {
                     <input type="submit" value="Submit" />
                 </form>
 
+                {this.state.infoBack.map((iterate) => {
+                    return (
+                        <div key = {iterate.id}>
+                            <h2> {iterate.name} </h2>
+                            <h3>{iterate.house}</h3>
+                            <p> {iterate.bloodStatus}</p>
+                            <p>{iterate.deathEater}</p>
+                        </div>
+
+                    )
+                })}
 
 
                 {/* {this.state.info.map(details =>
