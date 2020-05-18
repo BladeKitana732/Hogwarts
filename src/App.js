@@ -3,6 +3,7 @@ import './App.css';
 import Login,{Signup} from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
+//merge error
 import Wizard from './components/Wizard';
 import { BrowserRouter as Link, Router, Route} from 'react-router-dom';
 import Navbar from './components/Navbar';
