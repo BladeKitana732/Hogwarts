@@ -113,7 +113,8 @@ export default class Wizard extends Component {
                             <p>Dumbledores Army: { iterate.dumbledoresArmy ? "true" : "false" }</p>
                         
                             
-                        </div>
+                    
+                     </div>
 
                     )
                 })}
@@ -130,7 +131,6 @@ export default class Wizard extends Component {
                 </div> 
                 
                 )} */}
-            </div>
-        )
-    }
-}
+                    </div>
+                )}
+                .
