@@ -57,6 +57,8 @@ export default class Wizard extends Component {
         this.setState({
             input: event.target.value,
         })
+
+        console.log(this.state.input);
       }
 
     //purpose of function is to handle the submit from user text to render proper info 
