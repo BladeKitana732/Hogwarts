@@ -58,12 +58,17 @@ export default class Wizard extends Component {
             input: event.target.value,
         })
 
-        console.log(this.state.input);
+        // console.log(this.state.input);
       }
 
     //purpose of function is to handle the submit from user text to render proper info 
     handlingSubmit(e) {
         //realizing that api data is already being called had to comment out; need to make axios call w/in this functionality to render when text is submitted. not prior
+        axios.get(workingLink)
+
+        .then()
+
+
         
     }
 
