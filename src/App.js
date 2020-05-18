@@ -3,12 +3,18 @@ import './App.css';
 import Login,{Signup} from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
+<<<<<<< HEAD
 import Hero from './components/Hero';
 import { BrowserRouter as Router, Route,Link} from 'react-router-dom';
+=======
+import Wizard from './components/Wizard';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+>>>>>>> master
 import Navbar from './components/Navbar';
 import firebase  from './config/fireauth';
 import 'semantic-ui-css/semantic.min.css'
 
+<<<<<<< HEAD
 class  App extends Component{
   constructor(props){
     super();
@@ -67,6 +73,24 @@ class  App extends Component{
          );
   }
  
+=======
+// console.log(process.env.REACT_APP_KEY);
+
+
+
+
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Route exact path ="/" component= {Login} />
+      <Route exact path ="/Home" component= {Home} />
+      <Route exact path ="/Profile" component= {Profile} />
+      <Route exact path ="/Wizard" component= {Wizard} />
+    </Router>
+  );
+>>>>>>> master
 }
 
 export default App;

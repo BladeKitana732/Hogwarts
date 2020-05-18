@@ -15,8 +15,8 @@ export default function Navbar() {
                 Profile Navlink
             </NavLink></li>
 
-            <li><NavLink className= "navLinks" to="/Hero">
-                Hero Navlink
+            <li><NavLink className= "navLinks" to="/Wizard">
+                Wizard Navlink
             </NavLink></li>
 
         </ul>
