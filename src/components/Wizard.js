@@ -95,7 +95,7 @@ export default class Wizard extends Component {
                 <form onSubmit={this.handlingSubmit}>
                     <label>
                         Please enter name of witch or wizard (First and last with first letter capitalized for both. Ex: Harry Potter; Luna Lovegood, etc.)
-                        <input type = "text" value={this.state.input} onChange = {this.userInput} />
+                        <input type = "text" value={this.state.input} onChange = {this.userInput}/>
 
                     </label>
                     
@@ -106,10 +106,12 @@ export default class Wizard extends Component {
                     return (
                         <div key = {iterate._id}>
                             {/* <h1>{iterate._id}</h1> */}
-                            <h2> {iterate.name} </h2>
-                            <h3>{iterate.house}</h3> 
-                            <p> {iterate.bloodStatus}</p>
-                            <p>{ iterate.deathEater ? "true" : "false" }</p>
+                            <h2>Character Name: {iterate.name} </h2>
+                            <h3>House: {iterate.house}</h3> 
+                            <p>Blood-status: {iterate.bloodStatus}</p>
+                            <p>DeathEater: { iterate.deathEater ? "true" : "false" }</p>
+                            <p>Dumbledores Army: { iterate.dumbledoresArmy ? "true" : "false" }</p>
+                        
                             
                         </div>
 

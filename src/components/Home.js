@@ -43,7 +43,7 @@ export default class Home extends Component {
                 <img src= {sortingHatImg} alt= "sorting hat" onClick = {this.getHouse} style = {{width:400, height:400}}/>
 
                 {/* <button onClick = {this.getHouse}>Click me</button> */}
-                <h1><strong>Your House is:</strong>{this.state.house}</h1>
+                <h1><strong>Your House is:</strong> {this.state.house}</h1>
             </div>
         )
     }
