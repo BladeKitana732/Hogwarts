@@ -22,8 +22,17 @@ export default class Home extends Component {
         .then(Response => {
             let result = Response.data;
         
-            console.log(result);
+            // console.log(result);
+
+            this.setState({
+                house: result
+            })
         
+        })
+
+
+        .catch((err) => {
+            console.error('Computed error: ', err)
         })
     }
     render() {
