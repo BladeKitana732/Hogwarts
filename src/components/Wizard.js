@@ -131,6 +131,6 @@ export default class Wizard extends Component {
                 </div> 
                 
                 )} */}
-                    </div>
                 )}
-                .
+                    </div>
+    
