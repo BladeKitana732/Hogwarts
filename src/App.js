@@ -6,13 +6,13 @@ import './App.css';
 // import Hero from './components/Hero';
 // import { BrowserRouter as Router, Route} from 'react-router-dom';
 // import Navbar from './components/Navbar';
-import HeroInfo from './components/HeroInfo';
+import Spells from './components/Spells';
 
 function App() {
-  console.log(process.env.REACT_APP_GOOGLE_API_KEY)
+  console.log(process.env.REACT_APP_API_KEY)
   return (
     <div>
-      <HeroInfo/>
+      <Spells/>
     </div>
     // <Router>
     //   <Navbar />
