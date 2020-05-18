@@ -10,7 +10,7 @@ const key = process.env.REACT_APP_KEY;
 
 //referencing back to wine api
 
-const workingLink = `https://www.potterapi.com/v1/characters?key=${key}`
+const workingLink = `https://www.potterapi.com/v1/characters/?key=${key}&name=`
 
 export default class Wizard extends Component {
     constructor(props){
@@ -21,9 +21,9 @@ export default class Wizard extends Component {
             input: '',
             infoBack: []
         }
-
-
-
+        //binding the functions/methods made to render api information
+        this.userInput=this.userInput.bind(this);
+        this.handlingSubmit=this.handlingSubmit.bind(this);
     }
 
  
@@ -54,6 +54,7 @@ export default class Wizard extends Component {
 
     //was able to reference my Pawtastic project regarding forms to get this functionality: https://github.com/BladeKitana732/Pawtastic_form
     userInput = (event) => {
+
         this.setState({
             input: event.target.value,
         })
@@ -64,15 +65,19 @@ export default class Wizard extends Component {
     //purpose of function is to handle the submit from user text to render proper info 
     handlingSubmit(e) {
         //realizing that api data is already being called had to comment out; need to make axios call w/in this functionality to render when text is submitted. not prior
-        axios.get(workingLink)
 
-        .then(Response => {
-            let infoRendered = Response.data.data;
+        e.preventDefault();
 
-            console.log(infoRendered);
-        })
+        // axios.get(workingLink)
 
+        // .then(Response => {
+        //     let infoRendered = Response.data;
 
+        //     console.log(infoRendered);
+        // })
+
+        console.log(workingLink);
+        console.log(this.state.input);
         
     }
 
@@ -104,9 +109,10 @@ export default class Wizard extends Component {
                     return (
                         <div key = {iterate.id}>
                             <h2> {iterate.name} </h2>
-                            <h3>{iterate.house}</h3>
-                            <p> {iterate.bloodStatus}</p>
-                            <p>{iterate.deathEater}</p>
+                            {/* <h3>{iterate.house}</h3> */}
+                            {/* <p> {iterate.bloodStatus}</p>
+                            <p>{iterate.deathEater}</p> */}
+                            
                         </div>
 
                     )
