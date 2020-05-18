@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-console.log("wizard comp");
+// console.log("wizard comp");
 // console.log(process.env.REACT_APP_KEY);
 
 const key = process.env.REACT_APP_KEY;
@@ -28,29 +28,45 @@ export default class Wizard extends Component {
 
  
     
- componentDidMount() {
+//  componentDidMount() {
 
-        axios.get(workingLink)
+//         axios.get(workingLink)
     
-        .then((result) => {
-            const allData = result.data;
+//         .then((result) => {
+//             const allData = result.data;
 
-            console.log(allData);
+//             console.log(allData);
     
-            this.setState({
-                infoBack: allData
-            });
+//             this.setState({
+//                 infoBack: allData
+//             });
             
-        })
+//         })
 
-        .catch((err) => {
+//         .catch((err) => {
 
-            console.log('Error has been computed', err)
+//             console.log('Error has been computed', err)
     
-        });
+//         });
 
 
+//     }
+
+    //purpose of function is to handle the submit from user text to render proper info 
+    handlingSubmit(e) {
+        //realizing that api data is already being called had to comment out; need to make axios call w/in this functionality to render when text is submitted. not prior
+        
     }
+
+
+
+
+
+
+
+
+
+
     
     render() {
         return (
