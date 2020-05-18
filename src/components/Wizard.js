@@ -67,7 +67,7 @@ export default class Wizard extends Component {
         //realizing that api data is already being called had to comment out; need to make axios call w/in this functionality to render when text is submitted. not prior
 
         e.preventDefault();
-
+        //case sensitive 
         axios.get(workingLink + this.state.input)
 
         .then(Response => {
