@@ -1,38 +1,53 @@
 ## MIN REQUIREMENTS 
 
+<<<<<<< HEAD
+ Project has Instructor approval at the start of project week - Completed
+=======
  Project has Instructor approval at the start of project week - Completed 
+>>>>>>> master
 
  Project code is pushed to a public Git repository - Completed 
 
- Project planning board used throughout project
+ Project planning board used throughout project - Completed 
 
- ReactJS is used for frontend development
+ ReactJS is used for frontend development- Completed
 
- Uses CSS or styled components to style application
+ Uses CSS or styled components to style application- Completed
 
- App renders in browser
+ App renders in browser- Completed
 
+<<<<<<< HEAD
+ Uses a 3rd party api - https://www.potterapi.com/v1/characters 
+=======
  Uses a 3rd party api - https://www.potterapi.com/v1/characters
+>>>>>>> master
 
- Project is deployed using 1 of the deployment options(heroku, surge, aws or firebase
+ Project is deployed using 1 of the deployment options(heroku, surge, aws or firebase - Completed
 
 Must contain a readme file at the root of the repository - Completed
 
- Git repo has at least 30 git commit
+ Git repo has at least 30 git commit - Completed 
 
  Has readme.md file at the root of repository - Completed 
 
- App should be able to use CRUD in some form 
+ App should be able to use CRUD in some form - Completed
 
  readme file clearly documents the purpose of the project as a problem statement
+<<<<<<< HEAD
+ >Purpose of project is to have user make account, in doing so they get access to Harry Potter information through 3rd party api to learn more about characters, spells, houses, etc.
+
+ readme file clearly documents the target end user for this program.
+ >Due to pandemic, we are making this application for anyone home (which is everyone lol), to have fun and let loose and remember the good times before Harry Potter finished. 
+=======
  >Purpose of project is to have user make account, in doing so they get access to Harry Potter information through 3rd party api to learn more about them.
 
  readme file clearly documents the target end user for this program.
  >Due to pandemic, we are making this application for anyone home (which is everyone lol), to have fun and let loose and remember the good times when before Harry Potter finished.  
+>>>>>>> master
 
  readme file has embedded link (not url) to publicly deployed app
 
- readme file includes image to wireframes
+ readme file includes image to wireframes - Completed 
 
 ### Login page 
  ![wireframe](./Login_SignUp.png)
