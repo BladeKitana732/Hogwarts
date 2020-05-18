@@ -1,5 +1,6 @@
 import React, {Compononent} from 'react';
 import './App.css';
+import axios from 'axios';
 // import Login from './components/Login';
 // import Home from './components/Home';
 // import Profile from './components/Profile';
@@ -9,7 +10,7 @@ import './App.css';
 import Spells from './components/Spells';
 
 function App() {
-  console.log(process.env.REACT_APP_API_KEY)
+  
   return (
     <div>
       <Spells/>
