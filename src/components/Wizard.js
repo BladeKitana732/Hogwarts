@@ -121,12 +121,10 @@ export default class Wizard extends Component {
 
                 {/* {this.state.info.map(details =>
                 <div key= { details.id }>
-
                 <h2>{details.name}</h2>
                 
                 <h2>{details.house}</h2>
                 
-
                 </div> 
                 
                 )} */}
