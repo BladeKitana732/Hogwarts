@@ -18,7 +18,6 @@ export default class Wizard extends Component {
 
         //this is supposed to take input of user when searching name and/or house and render back all info of that witch/wizard OR when typing in house to return all names of witches/wizards who belong to said house
         this.state = {
-            input: '',
             infoBack: []
         }
 
