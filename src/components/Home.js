@@ -1,32 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
-
 
 const sortingHat = 'https://www.potterapi.com/v1/sortingHat';
 
-// console.log(sortingHat);
+export default class Home extends Component {
+    constructor(props){
+        super(props);
 
-function getHouse() {
-    axios.get(sortingHat)
+        this.state = {
+            house: ''
+        }
 
-    .then(result => {
-        let house = result.data;
 
-        console.log(house);
     }
-    )
 
 
+    getHouse= () => {
+        axios.get(sortingHat)
+
+        .then(Response => {
+            let result = Response.data;
+        
+            console.log(result);
+        
+        })
+    }
+    render() {
+        return (
+            <div>
+                <h1><strong>Your House is:</strong>{this.state.house}</h1>
+            </div>
+        )
+    }
 }
 
-export default function Home() {
-    getHouse();
-    return (
-        <div>
-            <h1>Click button to see your house!</h1>
-            <button onClick= {getHouse}>Click Me</button>
-        </div>
-    )
-}
 
 
