@@ -7,13 +7,13 @@ function HeroInfo() {
         <div class ="parent">
             <ul class="children">
                 <li>
-                    <input class="username" placeholder="Username"></input>
+                    <input className="username" placeholder="Username"></input>
                 </li>
                 <li>
-                    <input class ="password" placeholder="Password"></input>
+                    <input className ="password" placeholder="Password"></input>
                 </li>
                 <li>
-                    <input class="password1" placeholder="Confirm Password"></input>
+                    <input className="password1" placeholder="Confirm Password"></input>
                 </li>
             </ul>
         </div>

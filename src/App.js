@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Compononent} from 'react';
 import './App.css';
 // import Login from './components/Login';
 // import Home from './components/Home';
@@ -9,6 +9,7 @@ import './App.css';
 import HeroInfo from './components/HeroInfo';
 
 function App() {
+  console.log(process.env.REACT_APP_GOOGLE_API_KEY)
   return (
     <div>
       <HeroInfo/>
