@@ -52,6 +52,19 @@ export default class Wizard extends Component {
 
 //     }
 
+    //was able to reference my Pawtastic project regarding forms to get this functionality: https://github.com/BladeKitana732/Pawtastic_form
+    userInput(e){
+
+        e.preventDefault();
+
+        this.setState({
+            input: e.target.value
+        })
+
+        console.log(this.state.input);
+
+    }
+
     //purpose of function is to handle the submit from user text to render proper info 
     handlingSubmit(e) {
         //realizing that api data is already being called had to comment out; need to make axios call w/in this functionality to render when text is submitted. not prior
