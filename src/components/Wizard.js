@@ -10,7 +10,8 @@ const key = process.env.REACT_APP_KEY;
 
 //referencing back to wine api
 
-const workingLink = `https://www.potterapi.com/v1/characters/?key=${key}&name=`
+const workingLink = `https://www.potterapi.com/v1/characters/?key=${key}&name=`;
+const houseLink = `https://www.potterapi.com/v1/characters/?key=${key}&house=`;
 
 export default class Wizard extends Component {
     constructor(props){
@@ -87,23 +88,13 @@ export default class Wizard extends Component {
         
     }
 
-
-
-
-
-
-
-
-
-
     
     render() {
         return (
             <div>
                 <form onSubmit={this.handlingSubmit}>
                     <label>
-                        Please enter name of witch or wizard. You may also type in the house to see all who belong to it.
-
+                        Please enter name of witch or wizard (First and last with first letter capitalized for both. Ex: Harry Potter; Luna Lovegood, etc.)
                         <input type = "text" value={this.state.input} onChange = {this.userInput} />
 
                     </label>
@@ -114,7 +105,7 @@ export default class Wizard extends Component {
                 {this.state.infoBack.map((iterate) => {
                     return (
                         <div key = {iterate._id}>
-                            <h1>{iterate._id}</h1>
+                            {/* <h1>{iterate._id}</h1> */}
                             <h2> {iterate.name} </h2>
                             <h3>{iterate.house}</h3> 
                             <p> {iterate.bloodStatus}</p>
