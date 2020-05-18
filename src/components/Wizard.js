@@ -68,13 +68,14 @@ export default class Wizard extends Component {
 
         e.preventDefault();
 
-        // axios.get(workingLink)
+        axios.get(workingLink + this.state.input)
 
-        // .then(Response => {
-        //     let infoRendered = Response.data;
+        .then(Response => {
+            let infoRendered = Response.data
+            
 
-        //     console.log(infoRendered);
-        // })
+            console.log(infoRendered);
+        })
 
         console.log(workingLink);
         console.log(this.state.input);
