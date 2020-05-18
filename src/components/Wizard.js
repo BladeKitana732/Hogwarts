@@ -18,6 +18,7 @@ export default class Wizard extends Component {
 
         //this is supposed to take input of user when searching name and/or house and render back all info of that witch/wizard OR when typing in house to return all names of witches/wizards who belong to said house
         this.state = {
+            input: '',
             infoBack: []
         }
 
@@ -65,7 +66,11 @@ export default class Wizard extends Component {
         //realizing that api data is already being called had to comment out; need to make axios call w/in this functionality to render when text is submitted. not prior
         axios.get(workingLink)
 
-        .then()
+        .then(Response => {
+            let infoRendered = Response.data.data;
+
+            console.log(infoRendered);
+        })
 
 
         
