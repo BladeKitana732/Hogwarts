@@ -5,13 +5,15 @@
 
 #navContainer {
   border: solid 4px purple;
-
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  gap: 2em;
 }
 
 #navLinks {
   border: solid 4px blue;
-  display: grid;
-  grid-template-rows: 1fr;
+  /* display: grid;
+  grid-template-rows: 1fr; */
 }
 
 
@@ -19,6 +21,7 @@ li {
   font-family: fantasy;
   font-size: 25px;
   text-align: center;
+
 }
 
 p {
