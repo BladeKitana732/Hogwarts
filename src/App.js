@@ -54,7 +54,7 @@ class  App extends Component{
         <div className="App">
           <Router>
             <div id="navContainer">
-              <nav>
+              <nav id="navLinks">
                 <ul>
                   <li>
                     <Link to="/"></Link>
