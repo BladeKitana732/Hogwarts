@@ -53,7 +53,7 @@ class Profile extends Component{
             // An error happened.
           });
           // window.location.reload(false);
-          window.location.assign("http://localhost:3000/");
+          window.location.assign("http://localhost:3001/");
     }
 
      async deleteUser(){

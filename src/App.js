@@ -5,7 +5,6 @@ import Home from './components/Home';
 import Profile from './components/Profile';
 import Wizard from './components/Wizard';
 import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
-import Navbar from './components/Navbar';
 import firebase  from './config/fireauth';
 import 'semantic-ui-css/semantic.min.css'
 
@@ -54,7 +53,7 @@ class  App extends Component{
       return (
         <div className="App">
           <Router>
-            <div>
+            <div id="navContainer">
               <nav>
                 <ul>
                   <li>
