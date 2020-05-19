@@ -34,21 +34,21 @@ class  App extends Component{
   routeProtectionCheck() {
     if(!this.state.user) {
       return (
-      <div className="App">
-        <Router>
-          <nav>
-          <Link to="/Login" ></Link>
-          <Link to="/Signup" ></Link>
-          <Link to="/" ></Link>
-          </nav>
-          <Route exact path="/Login" component={Login}>
-          </Route>
-            <Route exact path="/Signup" component={Signup}>
-          </Route>
-          <Route exact path="/" component={Login}>
-          </Route>
-        </Router>
-      </div>
+        <div className="App">
+          <Router>
+            <nav>
+            <Link to="/Login" ></Link>
+            <Link to="/Signup" ></Link>
+            <Link to="/" ></Link>
+            </nav>
+            <Route exact path="/Login" component={Login}>
+            </Route>
+              <Route exact path="/Signup" component={Signup}>
+            </Route>
+            <Route exact path="/" component={Login}>
+            </Route>
+          </Router>
+        </div>
       )
     } else {
       return (
