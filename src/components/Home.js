@@ -37,21 +37,16 @@ export default class Home extends Component {
         })
     }
     render() {
+        
         return (
             <div>
                 <h1 style={{fontFamily: 'cursive'}}>Click sorting hat to get your house!</h1>
                 <img src= {sortingHatImg} alt= "sorting hat" onClick = {this.getHouse} style = {{width:400, height:400}}/>
 
                 {/* <button onClick = {this.getHouse}>Click me</button> */}
-                <h1 style={{fontFamily: 'cursive', fontColor: (() => {
-                    switch (this.state.house){
-                        case "Hufflepuff": return 'yellow';
-                        case "Gryffindor": return 'red';
-                        case "Slytherin": return 'green';
-                        case "Ravenclaw": return 'blue';
-                        default: return 'black';
-                    }
-                }) }}><strong>Your House is:</strong> {this.state.house}</h1>
+                <h1 style={{fontFamily: 'cursive' }}><strong>Your House is:</strong> <p>{this.state.house}</p> </h1>
+                
+                
             </div>
         )
     }

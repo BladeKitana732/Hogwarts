@@ -99,15 +99,16 @@ export default class Wizard extends Component {
 
                     </label>
                     
-                    <input type="submit" value="Submit" />
+                    <input id="button" type="submit" value="Get Info" style= {{width:100, height:50, borderRadius: 30}}/>
                 </form>
+                <br/>
 
                 {this.state.infoBack.map((iterate) => {
                     return (
                         <div key = {iterate._id}>
                             {/* <h1>{iterate._id}</h1> */}
-                            <h2>Character Name: {iterate.name} </h2>
-                            <h3>House: {iterate.house}</h3> 
+                            <h2 style= {{fontFamily: "fantasy"}}>Character Name: {iterate.name} </h2>
+                            <h3 style={{fontFamily: "fantasy"}}>House: {iterate.house}</h3> 
                             <p>Blood-status: {iterate.bloodStatus}</p>
                             <p>DeathEater: { iterate.deathEater ? "true" : "false" }</p>
                             <p>Dumbledores Army: { iterate.dumbledoresArmy ? "true" : "false" }</p>

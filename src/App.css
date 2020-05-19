@@ -34,3 +34,9 @@ label {
 h1 {
   font-family: cursive;
 }
+
+#button:hover {
+
+  border-color: black;
+
+}
