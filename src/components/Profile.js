@@ -53,7 +53,7 @@ class Profile extends Component{
             // An error happened.
           });
           // window.location.reload(false);
-          window.location.assign("http://localhost:3001/");
+          window.location.assign("https://herosite-60fd9.web.app/");
     }
 
      async deleteUser(){
@@ -71,7 +71,7 @@ class Profile extends Component{
             console.log(e)
           }
         
-          window.location.assign("http://localhost:3000/");
+          window.location.assign("https://herosite-60fd9.web.app/");
 
     }
      updateProfile=(e)=>{
