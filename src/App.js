@@ -4,7 +4,7 @@ import Login,{Signup} from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import Wizard from './components/Wizard';
-import { BrowserRouter as Link, Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import Navbar from './components/Navbar';
 import firebase  from './config/fireauth';
 import 'semantic-ui-css/semantic.min.css'
@@ -30,43 +30,76 @@ class  App extends Component{
       }
     })
   }
-  render(){
-          console.log("this.state.user");
-          console.log(this.state.user)
-        return (
-          this.state.user?(
-            <div className="App">
-              <Router>
-                <Navbar />
-                    <Route exact path ="/Home" component= {Home} />
-                    <Route exact path ="/Profile" component= {Profile} />
-                    <Route exact path ="/Wizard" component= {Wizard} />
-                    <Route exact path ="/" component= {Home} />
 
-                </Router>          
+  routeProtectionCheck() {
+    if(!this.state.user) {
+      return (
+      <div className="App">
+        <Router>
+          <nav>
+          <Link to="/Login" ></Link>
+          <Link to="/Signup" ></Link>
+          <Link to="/" ></Link>
+          </nav>
+          <Route exact path="/Login" component={Login}>
+          </Route>
+            <Route exact path="/Signup" component={Signup}>
+          </Route>
+          <Route exact path="/" component={Login}>
+          </Route>
+        </Router>
+      </div>
+      )
+    } else {
+      return (
+        <div className="App">
+          <Router>
+            <div>
+              <nav>
+                <ul>
+                  <li>
+                    <Link to="/"></Link>
+                  </li>
+                  <li>
+                    <Link to="/Profile">Profile</Link>
+                  </li>
+                  <li>
+                    <Link to="/Home">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/Wizard">Wizard</Link>
+                  </li>
+                </ul>
+              </nav>
+
+              <Switch>
+                <Route path="/Home">
+                  <Home />
+                </Route>
+                <Route path="/Profile">
+                  <Profile />
+                </Route>
+                <Route path="/Wizard">
+                  <Wizard />
+                </Route>
+                <Route path="/">
+                  <Home />
+                </Route>
+              </Switch>
             </div>
-          ):(
-              <div className="App">
-                <Router>
-                  <nav>
-                  <Link to="/Login" ></Link>
-                  <Link to="/Signup" ></Link>                
-                  <Link to="/" ></Link>
-                  </nav>
-                  <Route exact path="/Login" component={Login}>
-                  </Route>
-                    <Route exact path="/Signup" component={Signup}>
-                  </Route>
-                  <Route exact path="/" component={Login}>
-                  </Route>
-
-                </Router>
-              </div>
-
-          )
-         );
+          </Router>
+        </div>
+      )
+    }
   }
- 
+  render(){
+    return (
+      <div>
+        { this.routeProtectionCheck() }
+      </div>
+    )
+  }
+
 }
 
 export default App;
