@@ -52,9 +52,10 @@ class Profile extends Component{
         }).catch(function(error) {
             // An error happened.
           });
-          window.location.reload(false);
-
+          // window.location.reload(false);
+          window.location.assign("http://localhost:3000/");
     }
+
      async deleteUser(){
           console.log("delete user called");
           try{
@@ -70,7 +71,7 @@ class Profile extends Component{
             console.log(e)
           }
         
-        window.location.reload(false);
+          window.location.assign("http://localhost:3000/");
 
     }
      updateProfile=(e)=>{
