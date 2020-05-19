@@ -4,14 +4,13 @@
 }
 
 #navContainer {
-  border: solid 4px purple;
-  display: grid;
-  grid-template-rows: repeat(3,1fr);
-  gap: 2em;
+  /* border: solid 4px purple; */
+  /* display: grid;
+  grid-template-rows: repeat(3,1fr); */
 }
 
 #navLinks {
-  border: solid 4px blue;
+  /* border: solid 4px blue; */
   /* display: grid;
   grid-template-rows: 1fr; */
 }
