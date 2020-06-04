@@ -54,7 +54,7 @@ Must contain a readme file at the root of the repository - Completed
  
  ### Link to deployed website
  
- ["Herosite"](https://herosite-60fd9.web.app)
+ [Herosite](https://herosite-60fd9.web.app)
 
 ### Login page 
  ![wireframe](./Login_SignUp.png)
